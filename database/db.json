@@ -1,12 +1,16 @@
 {
-    "animals":[
-        {"id":1, "name":"Turca", "type": "dog","age":4},
-        {"id":2, "name":"Tom", "type": "cat","age":2},
-        {"id":3, "name":"JErry", "type": "rat","age":2},
-        {"id":4, "name":"rex", "type": "dog","age":2}
-    ],
-
-    "users":[
-        {"id":1,"name":"Kassio"}
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Turca",
+      "type": "dog",
+      "age": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Kassio"
+    }
+  ]
 }

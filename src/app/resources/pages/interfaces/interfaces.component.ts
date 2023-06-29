@@ -16,7 +16,8 @@ export class InterfacesComponent {
 
   animals: Animal[] = []
 
-  showAge(animal:Animal): void{
+  showAge(animal:Animal): void
+  {
     let msg = `O ${animal.type} com nome ${animal.name} tem ${animal.age} anos!`
     Notiflix.Notify.info(msg)
   }
@@ -24,6 +25,11 @@ export class InterfacesComponent {
   getAnimals():void
   {
     this.animalsService.getAll().subscribe((animals) => (this.animals = animals));
+  }
+
+  removeAnimal(animal: Animal) {
+    this.animals = this.animals.filter((a) => animal !== a);
+    this.animalsService.remove(animal.id).subscribe();
   }
 }
 
