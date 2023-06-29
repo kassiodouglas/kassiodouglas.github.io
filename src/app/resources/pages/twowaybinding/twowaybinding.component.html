@@ -1,0 +1,25 @@
+<div class="box p-3 mb-5">
+    <h1>Two Ways DataBinding</h1>
+    <p>Vincular uma propriedade com algum elemnto e refletir em outro</p>
+    <P class="text-info">obs: Necessário o import dentro de 'app.module.ts' de 'FormsModule' e adicionar na area de imports</P>
+
+    <form>
+        <input class='form-control' type="text" name="name" [(ngModel)]="name" placeholder="Nome">
+        <select class="mt-2 form-select"  name="tipo"  [(ngModel)]="tipo">
+            <option value="">Escolha um item</option>
+            <option value="animal">animal</option>
+            <option value="humano">humano</option>
+            <option value="et">et</option>
+        </select>
+    
+        <input type="submit" class='mt-1 btn btn-success' value='Enviar' disabled>
+    </form>
+    
+    <div class="mt-2">
+        <p class="fw-bold">Dados do form:</p>
+        <div *ngIf="name !== ''">input name: {{name}}</div>
+        <div *ngIf="tipo !== ''">input tipo: {{tipo}}</div>
+    </div>
+
+    
+</div>

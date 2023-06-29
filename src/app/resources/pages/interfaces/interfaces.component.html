@@ -1,0 +1,9 @@
+<div class="box p-3 mb-5">
+    <h1>Uso de interfaces</h1>
+    <p>Força o uso de padrões para gerar arrays/objetos</p>
+   
+    <div class="list-group">
+        <button  *ngFor="let animal of animals" class="list-group-item list-group-item-action" (click)="showAge(animal)">{{animal.name}} - {{animal.type}}</button>
+    </div>
+    
+</div>

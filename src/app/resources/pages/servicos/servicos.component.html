@@ -1,0 +1,16 @@
+<div class="box p-3 mb-5">
+    <h1>Services</h1>
+    <p>Consumir algum serviço interno. Este serviço pode fazer uso de alguma api, conectar ao banco, etc...</p>
+
+    <div>
+        Consultar um CEP no api do <a href="https://viacep.com.br">/viacep.com.br</a>
+        <input type="text" class='form-control' [(ngModel)]="cep" placeholder="Informe um cep">
+    
+        <button class='mt-3 btn btn-info'(click)="consumirCep()">Buscar</button>
+    
+        <div *ngIf="dataCep !== null">
+            {{dataCep | json}}
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="title p-3 mb-3 border-bottom">
+    Parent: {{nameParent}}
+    <div class="fs-6 text-info">{{message}}</div>
+</div>
+
+<div class="">
+    <app-child *ngFor="let child of childs" [nameParent]="nameParent" [nameChild]="child"  (msgToParent)="onMsgToParent(child)" (msgToAvo)="onMsgToAvo()"/>
+</div>
+
+
+
+

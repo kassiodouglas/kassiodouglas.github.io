@@ -1,0 +1,12 @@
+<app-offcanvas idoff='offhome' title='Conteudo extra' position="start"></app-offcanvas>
+
+<div class="box p-3 mb-5">
+    <h1>Compartilhamento de dados entre componentes</h1>
+    <p>Uso de pai para filho com data binding, e o inverso com uso de emits</p>
+    
+    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offhome" aria-controls="offcanvasExample">
+        Veja conteudo extra
+    </button>
+
+    <app-parent *ngFor="let parent of parents" [message]="defaultMessage" [nameParent]="parent.nameParent" [childs]="parent.childs" (onMsgParentToAvo)="onSendEventToAvo()"></app-parent>
+</div>
